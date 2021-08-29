@@ -14,6 +14,8 @@
 		A57AE18626DBCEE5003FEEFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57AE18526DBCEE5003FEEFB /* Assets.xcassets */; };
 		A57AE18926DBCEE5003FEEFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57AE18726DBCEE5003FEEFB /* LaunchScreen.storyboard */; };
 		A57AE19626DBCFD8003FEEFB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57AE19526DBCFD8003FEEFB /* User.swift */; };
+		A57AE19826DC211F003FEEFB /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57AE19726DC211F003FEEFB /* WelcomeViewController.swift */; };
+		A57AE19A26DC4730003FEEFB /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57AE19926DC4730003FEEFB /* AboutMeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		A57AE18826DBCEE5003FEEFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A57AE18A26DBCEE6003FEEFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A57AE19526DBCFD8003FEEFB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A57AE19726DC211F003FEEFB /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		A57AE19926DC4730003FEEFB /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				A57AE18026DBCEE3003FEEFB /* ViewController.swift */,
+				A57AE19926DC4730003FEEFB /* AboutMeViewController.swift */,
+				A57AE19726DC211F003FEEFB /* WelcomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -181,8 +187,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A57AE19626DBCFD8003FEEFB /* User.swift in Sources */,
+				A57AE19826DC211F003FEEFB /* WelcomeViewController.swift in Sources */,
 				A57AE18126DBCEE3003FEEFB /* ViewController.swift in Sources */,
 				A57AE17D26DBCEE3003FEEFB /* AppDelegate.swift in Sources */,
+				A57AE19A26DC4730003FEEFB /* AboutMeViewController.swift in Sources */,
 				A57AE17F26DBCEE3003FEEFB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,7 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Maria.Karpukhina.AboutMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -359,7 +367,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Maria.Karpukhina.AboutMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
