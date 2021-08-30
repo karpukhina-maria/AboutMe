@@ -154,20 +154,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text about me" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKt-pK-Kwd">
-                                <rect key="frame" x="16" y="66" width="288" height="434"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CB9-9r-I9q">
+                                <rect key="frame" x="20" y="84" width="280" height="400"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text about me" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKt-pK-Kwd">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="359"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="1MU-F1-DSv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZB-eV-3qg">
+                                        <rect key="frame" x="94.5" y="375" width="91" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="0bI-ZF-gRH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="View photo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Bb3-cm-rdg" kind="presentation" id="0dU-73-O6h"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Hth-7B-Z3L"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M9W-vZ-3A8"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="M9W-vZ-3A8" firstAttribute="trailing" secondItem="jKt-pK-Kwd" secondAttribute="trailing" constant="16" id="5et-3l-9T6"/>
-                            <constraint firstItem="M9W-vZ-3A8" firstAttribute="bottom" secondItem="jKt-pK-Kwd" secondAttribute="bottom" constant="19" id="cCJ-cJ-x61"/>
-                            <constraint firstItem="jKt-pK-Kwd" firstAttribute="leading" secondItem="M9W-vZ-3A8" secondAttribute="leading" constant="16" id="m9o-ng-5Du"/>
-                            <constraint firstItem="jKt-pK-Kwd" firstAttribute="top" secondItem="M9W-vZ-3A8" secondAttribute="top" constant="22" id="rAS-xm-oIY"/>
+                            <constraint firstItem="CB9-9r-I9q" firstAttribute="centerY" secondItem="5Ct-s3-UxU" secondAttribute="centerY" id="40h-cT-JBz"/>
+                            <constraint firstItem="CB9-9r-I9q" firstAttribute="centerX" secondItem="5Ct-s3-UxU" secondAttribute="centerX" id="5EN-U0-r4V"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UY8-1X-6Mm"/>
@@ -178,6 +200,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tit-C7-xCD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2840.625" y="68.661971830985919"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="grp-Ht-oV9">
+            <objects>
+                <viewController id="Bb3-cm-rdg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Goz-Kr-ip0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mini2" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEP-EK-JQ3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ycF-2i-FWL"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="dEP-EK-JQ3" firstAttribute="bottom" secondItem="ycF-2i-FWL" secondAttribute="bottom" id="3zq-m3-N7P"/>
+                            <constraint firstItem="dEP-EK-JQ3" firstAttribute="leading" secondItem="ycF-2i-FWL" secondAttribute="leading" id="7IA-5V-S0F"/>
+                            <constraint firstItem="dEP-EK-JQ3" firstAttribute="top" secondItem="ycF-2i-FWL" secondAttribute="top" id="SEZ-El-d0A"/>
+                            <constraint firstItem="dEP-EK-JQ3" firstAttribute="trailing" secondItem="ycF-2i-FWL" secondAttribute="trailing" id="pvX-1U-Xdj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJM-9f-RpY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3556.875" y="68.661971830985919"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="LXR-Mt-iOQ">
@@ -220,6 +269,7 @@
     <resources>
         <image name="book" catalog="system" width="128" height="102"/>
         <image name="bubble.middle.bottom" catalog="system" width="128" height="110"/>
+        <image name="mini2" width="3024" height="4032"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
